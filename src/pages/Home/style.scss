@@ -1,0 +1,684 @@
+#intro {
+    background-image: url('../../assets/images/intro-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 15rem 0;
+    position: relative;
+    z-index: 1;
+
+    & .mask {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    & .container {
+        & .intro_wrapper {
+            & h1 {
+                max-width: 675px;
+                color: #ffffff;
+                font-size: 107px;
+                font-weight: 700;
+                line-height: 129px;
+                letter-spacing: 4.82px;
+                margin-bottom: 24px;
+            }
+
+            & p {
+                font-size: 26px;
+                font-weight: 400;
+                line-height: 31px;
+                color: #FFFFFF;
+                margin-bottom: 70px;
+            }
+
+            & .intro_buttons {
+                display: flex;
+                column-gap: 44px;
+
+                & div {
+                    width: 218px;
+                    height: 70px;
+                    border: 1px solid #fab448;
+                    position: relative;
+                }
+
+                & .projects_btn {
+                    width: 218px;
+                    height: 70px;
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    background: #fab448;
+                    color: #FFFFFF;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        top: 0;
+                        right: 0;
+                    }
+                }
+
+                & .contact_btn {
+                    width: 218px;
+                    height: 70px;
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    border: 1px solid #fab448;
+                    color: #FFFFFF;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        top: 0;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#about {
+    padding: 150px 0;
+    background-image: url("../../assets/images/about_bg.png");
+    background-repeat: no-repeat;
+    background-position-y: 155px;
+
+
+    & .container {
+        & .about_title {
+            margin-bottom: 40px;
+
+            & span:nth-child(1) {
+                color: #262524;
+                font-size: 60px;
+                font-weight: 700;
+                line-height: 72px;
+                display: block;
+                position: relative;
+                margin-left: 70px;
+
+                &::after {
+                    content: "";
+                    width: 40px;
+                    height: 4px;
+                    background-color: #FF9800;
+                    position: absolute;
+                    left: -60px;
+                    top: 50%;
+                }
+            }
+
+            & span:nth-child(2) {
+                color: #262524;
+                font-size: 60px;
+                font-weight: 700;
+                line-height: 72px;
+                margin-left: 125px;
+                letter-spacing: 5px;
+            }
+        }
+
+        & .about_end {
+            display: flex;
+            position: relative;
+            justify-content: end;
+
+            & .about_end-text {
+                max-width: 620px;
+                color: #262524;
+                font-size: 19.53px;
+                font-weight: 400;
+                line-height: 36px;
+                position: absolute;
+                left: 0;
+
+            }
+
+            & .grid_container {
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+
+                & div:nth-child(1) {
+                    border: none;
+                }
+
+                & div {
+                    width: 360px;
+                    height: 234px;
+                    border: 1px solid #9e9e9e;
+                    padding: 36px 31px;
+
+                    & h5 {
+                        color: #262524;
+                        font-size: 56.5px;
+                        font-weight: 700;
+                        line-height: 68px;
+                    }
+
+                    & p {
+                        color: #262524;
+                        font-size: 18.7px;
+                        font-weight: 400;
+                    }
+                }
+
+                & div:nth-child(7) {
+                    display: grid;
+                    place-content: center;
+                    background-color: #FF9800;
+
+                    & h5 {
+                        color: #ffffff;
+                        font-size: 31px;
+                        font-weight: 400;
+                        line-height: 37px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#advantages {
+    padding: 84px 0 160px 0;
+
+    & .container {
+        & .adv_title {
+            margin-bottom: 105px;
+
+            & span:nth-child(1) {
+                color: #262524;
+                font-size: 60px;
+                font-weight: 700;
+                line-height: 72px;
+                display: block;
+                position: relative;
+                margin-left: 70px;
+
+                &::after {
+                    content: "";
+                    width: 40px;
+                    height: 4px;
+                    background-color: #FF9800;
+                    position: absolute;
+                    left: -60px;
+                    top: 50%;
+                }
+            }
+
+            & span:nth-child(2) {
+                color: #262524;
+                font-size: 60px;
+                font-weight: 700;
+                line-height: 72px;
+                margin-left: 125px;
+                letter-spacing: 5px;
+            }
+        }
+
+        & .adv_card-wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 440px));
+            justify-content: space-between;
+            column-gap: 20px;
+
+            & .adv_card {
+                & h4 {
+                    color: #262524;
+                    font-size: 25.9px;
+                    font-weight: 700;
+                    line-height: 39px;
+                    margin: 40px 0 24px 0;
+                    cursor: pointer;
+                }
+
+                & p {
+                    color: #262524;
+                    font-size: 17.66px;
+                    font-weight: 400;
+                    line-height: 28.5px;
+                }
+
+                &:hover {
+                    & svg {
+                        & g {
+                            & path {
+                                stroke: #FF9800;
+
+                            }
+                        }
+                    }
+
+                    & h4 {
+                        color: #FF9800;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#projects {
+    & .container {
+        & h2 {
+            & span:nth-child(1) {
+                color: #262524;
+                font-size: 60px;
+                font-weight: 700;
+                line-height: 72px;
+                display: block;
+                position: relative;
+                margin-left: 70px;
+
+                &::after {
+                    content: "";
+                    width: 40px;
+                    height: 4px;
+                    background-color: #FF9800;
+                    position: absolute;
+                    left: -60px;
+                    top: 50%;
+                }
+            }
+
+            & span:nth-child(2) {
+                color: #262524;
+                font-size: 60px;
+                font-weight: 700;
+                line-height: 72px;
+                margin-left: 125px;
+                letter-spacing: 5px;
+            }
+        }
+
+        & .projects_wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+
+            & .projects_card {
+                
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1535px) {
+    #about {
+        & .container {
+            & .about_end {
+                & .about_end-text {
+                    font-size: 14px;
+                    line-height: 25.2px;
+                }
+
+                & .grid_container {
+                    & div {
+                        width: 252px;
+                        height: 164px;
+                        padding: 25px 22px;
+
+                        & h5 {
+                            font-size: 36px;
+                        }
+
+                        & p {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    #intro {
+        & .container {
+            & .intro_wrapper {
+                & h1 {
+                    font-size: 80px;
+                    line-height: 65px;
+                    letter-spacing: 2.41px;
+                }
+
+                & .intro_buttons {
+                    display: flex;
+                    column-gap: 44px;
+
+                    & div {
+                        width: 150px;
+                        height: 40px;
+                        border: 1px solid #fab448;
+                        position: relative;
+                    }
+
+                    & .projects_btn {
+                        width: 150px;
+                        height: 40px;
+                        font-size: 16px;
+                    }
+
+                    & .contact_btn {
+                        width: 150px;
+                        height: 40px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    #about {
+        & .container {
+            & .about_end {
+                & .about_end-text {
+                    font-size: 14px;
+                    line-height: 25.2px;
+                }
+
+                & .grid_container {
+                    & div {
+                        width: 180px;
+                        height: 120px;
+                        padding: 16px 18px;
+
+                        & h5 {
+                            font-size: 24px;
+                            line-height: 34px;
+                        }
+
+                        & p {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #advantages {
+        & .container {
+            & .adv_card-wrapper {
+                & .adv_card {
+                    & svg {
+                        width: 80px;
+                        height: 80px;
+                    }
+
+                    & h4 {
+                        font-size: 20px;
+                        margin: 20px 0 10px 0;
+                    }
+
+                    & p {
+                        font-size: 14px;
+                        line-height: normal;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    #intro {
+        & .container {
+            & .intro_wrapper {
+                & h1 {
+                    font-size: 53.5px;
+                    line-height: 65px;
+                    letter-spacing: 2.41px;
+                    margin-bottom: 8px;
+                }
+
+                & p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    #about {
+        & .container {
+            & .about_title {
+
+                & span:nth-child(1) {
+                    font-size: 48px;
+                    line-height: normal;
+                }
+
+                & span:nth-child(2) {
+                    font-size: 48px;
+                    line-height: normal;
+
+                }
+            }
+
+            & .about_end {
+                flex-direction: column;
+
+                & .about_end-text {
+                    position: static;
+                    margin-bottom: 40px;
+                }
+
+                & .grid_container {
+                    width: fit-content;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    #advantages {
+        & .container {
+            & .adv_title {
+
+                & span:nth-child(1),
+                span:nth-child(2) {
+                    font-size: 48px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #intro {
+        height: 100vh;
+        display: flex;
+        align-items: end;
+
+        & .container {
+            & .intro_wrapper {
+                & p {
+                    margin-bottom: 35px;
+                }
+
+                & .intro_buttons {
+                    padding: 0 10px;
+                    display: flex;
+                    column-gap: 44px;
+
+                    & div {
+                        width: 210px;
+                        height: 60px;
+                    }
+
+                    & .projects_btn {
+                        width: 210px;
+                        height: 60px;
+                        font-size: 20px;
+                    }
+
+                    & .contact_btn {
+                        width: 210px;
+                        height: 60px;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    #about {
+        padding: 75px 0;
+    }
+
+    #advantages {
+        & .container {
+            & .adv_title {
+                margin-bottom: 55px;
+            }
+
+            & .adv_card-wrapper {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+                row-gap: 60px;
+
+                & .adv_card {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    & svg {
+                        width: 120px;
+                        height: 120px;
+                    }
+
+                    & h4 {
+                        font-size: 32px;
+                    }
+
+                    & p {
+                        font-size: 16px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    #intro {
+        padding: 5rem 0;
+
+        & .container {
+            & .intro_wrapper {
+                & .intro_buttons {
+                    padding: 0 10px;
+                    display: flex;
+                    column-gap: 24px;
+
+                    & div {
+                        width: 120px;
+                        height: 40px;
+                        border: 1px solid #fab448;
+                        position: relative;
+                    }
+
+                    & .projects_btn {
+                        width: 120px;
+                        height: 40px;
+                        font-size: 16px;
+                    }
+
+                    & .contact_btn {
+                        width: 120px;
+                        height: 40px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    #about {
+        & .container {
+            & .about_title {
+
+                & span:nth-child(1) {
+                    font-size: 24px;
+                    line-height: normal;
+                }
+
+                & span:nth-child(2) {
+                    font-size: 24px;
+                    line-height: normal;
+                    margin-left: 90px;
+                    width: 100%;
+                    letter-spacing: 2px;
+                }
+            }
+
+            & .about_end {
+                & .about_end-text {
+                    position: static;
+                    margin-bottom: 40px;
+                }
+
+                & .grid_container {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                    width: fit-content;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    #advantages {
+        & .container {
+            & .adv_title {
+
+                & span:nth-child(1),
+                span:nth-child(2) {
+                    font-size: 28px;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #about {
+        & .container {
+            & .about_end {
+                & .grid_container {
+                    & div {
+                        width: 140px;
+                        height: 100px;
+                    }
+                }
+            }
+        }
+    }
+
+    #advantages {
+        & .container {
+            & .adv_title {
+                & span:nth-child(2) {
+                    margin-left: 100px;
+                    font-size: 24px;
+                }
+
+                & span:nth-child(1) {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
