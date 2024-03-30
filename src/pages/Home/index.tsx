@@ -1,5 +1,12 @@
 import { Link } from "react-router-dom";
+import MagicCityImage from "../../assets/images/magic_city.jpg";
+import BoulevardImage from "../../assets/images/boulevard.webp";
+import GoldenHouseImage from "../../assets/images/GoldenHouse.jpg";
+import FononImage from "../../assets/images/Fonon.webp";
+import InventoImage from "../../assets/images/Invento.webp";
+import ShcoolImage from "../../assets/images/PresidentSchool.webp";
 import "./style.scss";
+import Slider from "../../components/Ui/Slider";
 
 const Home = () => {
   return (
@@ -190,7 +197,7 @@ const Home = () => {
                     />
                   </clipPath>
                 </defs>
-                <g clip-path="url(#clip1_333)">
+                <g clipPath="url(#clip1_333)">
                   <path
                     id="Vector"
                     d="M70.48 26.7C72.06 26.7 73.51 27.6 74.21 29.02L76.32 33.31C76.93 34.54 78.1 35.39 79.45 35.58L84.18 36.27C85.75 36.5 87.05 37.59 87.54 39.1C88.02 40.6 87.62 42.25 86.48 43.36L83.06 46.7C82.08 47.65 81.64 49.03 81.87 50.38L82.67 55.09C82.94 56.65 82.3 58.22 81.02 59.15C79.74 60.08 78.04 60.2 76.64 59.47L72.41 57.24C71.2 56.61 69.76 56.61 68.55 57.24L64.31 59.47C62.91 60.2 61.22 60.08 59.94 59.15C58.66 58.22 58.02 56.65 58.28 55.09L59.09 50.38C59.32 49.03 58.88 47.65 57.9 46.7L54.47 43.36C53.34 42.25 52.93 40.6 53.42 39.1C53.91 37.59 55.21 36.5 56.78 36.27L61.51 35.58C62.86 35.39 64.03 34.54 64.64 33.31L66.75 29.02C67.45 27.6 68.9 26.7 70.48 26.7Z"
@@ -248,7 +255,7 @@ const Home = () => {
                     />
                   </clipPath>
                 </defs>
-                <g clip-path="url(#clip1_340)">
+                <g clipPath="url(#clip1_340)">
                   <path
                     id="Vector"
                     d="M71.99 48.52L52.29 68.22L40.47 "
@@ -286,14 +293,91 @@ const Home = () => {
           </h2>
           <div className="projects_wrapper">
             <div className="projects_card">
-              <h4>Magic City</h4>
-              <p>
-                Magic city is a large socially significant project. The cultural
-                and entertainment cluster in Tashkent is one of the new
-                attractions.
-              </p>
+              <img src={MagicCityImage} alt="Card image" />
+              <div className="content">
+                <h4>Magic City</h4>
+                <p>
+                  Magic city is a large socially significant project. The
+                  cultural and entertainment cluster in Tashkent is one of the
+                  new attractions.
+                </p>
+              </div>
+            </div>
+
+            <div className="projects_card">
+              <img src={BoulevardImage} alt="Card image" />
+              <div className="content">
+                <h4>Boulevard</h4>
+                <p>
+                  Magic city is a large socially significant project. The
+                  cultural and entertainment cluster in Tashkent is one of the
+                  new attractions.
+                </p>
+              </div>
+            </div>
+
+            <div className="projects_card">
+              <img src={GoldenHouseImage} alt="Card image" />
+              <div className="content">
+                <h4>Golden House</h4>
+                <p>
+                  Magic city is a large socially significant project. The
+                  cultural and entertainment cluster in Tashkent is one of the
+                  new attractions.
+                </p>
+              </div>
+            </div>
+
+            <div className="projects_card">
+              <img src={FononImage} alt="Card image" />
+              <div className="content">
+                <h4>Fonon</h4>
+                <p>
+                  Magic city is a large socially significant project. The
+                  cultural and entertainment cluster in Tashkent is one of the
+                  new attractions.
+                </p>
+              </div>
+            </div>
+
+            <div className="projects_card">
+              <img src={InventoImage} alt="Card image" />
+              <div className="content">
+                <h4>Invento</h4>
+                <p>
+                  Magic city is a large socially significant project. The
+                  cultural and entertainment cluster in Tashkent is one of the
+                  new attractions.
+                </p>
+              </div>
+            </div>
+
+            <div className="projects_card">
+              <img src={ShcoolImage} alt="Card image" />
+              <div className="content">
+                <h4>President Schools</h4>
+                <p>
+                  Magic city is a large socially significant project. The
+                  cultural and entertainment cluster in Tashkent is one of the
+                  new attractions.
+                </p>
+              </div>
             </div>
           </div>
+          <Link to={"/projects"}>
+            <div className="project_btn">
+              <button>All projects</button>
+            </div>
+          </Link>
+        </div>
+      </section>
+      <section id="news">
+        <div className="container">
+          <h2>
+            <span>Company</span>
+            <span>news</span>
+          </h2>
+          <Slider />
         </div>
       </section>
     </>

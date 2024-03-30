@@ -272,8 +272,12 @@
 }
 
 #projects {
+    padding: 95px 0;
+
     & .container {
         & h2 {
+            margin-bottom: 96px;
+
             & span:nth-child(1) {
                 color: #262524;
                 font-size: 60px;
@@ -300,16 +304,140 @@
                 font-weight: 700;
                 line-height: 72px;
                 margin-left: 125px;
-                letter-spacing: 5px;
             }
         }
 
         & .projects_wrapper {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 30px;
 
             & .projects_card {
-                
+                position: relative;
+                height: fit-content;
+                height: 330px;
+                max-width: 800px;
+                height: 440px;
+                overflow: hidden;
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    object-fit: cover;
+                    width: 100%;
+                    height: 440px;
+                }
+
+                & .content {
+                    padding: 36px 40px;
+                    transform: translateY(330px);
+                    transition: all 0.5s linear;
+                    cursor: pointer;
+
+                    & h4 {
+                        color: #ffffff;
+                        font-size: 32px;
+                        font-weight: 600;
+                        line-height: 48px;
+                    }
+
+                    & p {
+                        visibility: hidden;
+                    }
+                }
+
+                &:hover {
+                    background-color: rgba(150, 150, 150, 0.5);
+
+                    & img {
+                        backdrop-filter: blur(5px);
+                        -webkit-backdrop-filter: blur(5px);
+                        filter: blur(5px);
+                    }
+
+                    & .content {
+                        transform: translateY(0);
+
+                        & h4 {
+                            color: #fab448;
+                        }
+
+                        & p {
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+        }
+
+        & .project_btn {
+            width: 218px;
+            height: 70px;
+            border: 1px solid #fab448;
+            position: relative;
+            margin: 60px auto 0 auto;
+
+            & button {
+                width: 218px;
+                height: 70px;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background: #ffffff;
+                border: 1px solid #fab448;
+                color: #000000;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 24px;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    top: 0;
+                    right: 0;
+                    background: #fab448;
+                    color: #FFFFFF;
+                }
+            }
+
+        }
+    }
+}
+
+#news {
+    padding: 105px 0;
+
+    & .container {
+        & h2 {
+            margin-bottom: 90px;
+
+            & span:nth-child(1) {
+                color: #262524;
+                font-size: 60px;
+                font-weight: 700;
+                line-height: 72px;
+                display: block;
+                position: relative;
+                margin-left: 70px;
+
+                &::after {
+                    content: "";
+                    width: 40px;
+                    height: 4px;
+                    background-color: #FF9800;
+                    position: absolute;
+                    left: -60px;
+                    top: 50%;
+                }
+            }
+
+            & span:nth-child(2) {
+                color: #262524;
+                font-size: 60px;
+                font-weight: 700;
+                line-height: 72px;
+                margin-left: 125px;
             }
         }
     }
@@ -352,30 +480,6 @@
                     font-size: 80px;
                     line-height: 65px;
                     letter-spacing: 2.41px;
-                }
-
-                & .intro_buttons {
-                    display: flex;
-                    column-gap: 44px;
-
-                    & div {
-                        width: 150px;
-                        height: 40px;
-                        border: 1px solid #fab448;
-                        position: relative;
-                    }
-
-                    & .projects_btn {
-                        width: 150px;
-                        height: 40px;
-                        font-size: 16px;
-                    }
-
-                    & .contact_btn {
-                        width: 150px;
-                        height: 40px;
-                        font-size: 16px;
-                    }
                 }
             }
         }
@@ -494,6 +598,32 @@
             }
         }
     }
+
+    #projects {
+        padding: 75px 0;
+
+        & .container {
+
+            & .projects_wrapper {
+                & .projects_card {
+                    height: 400px;
+
+                    & img {
+                        height: 400px;
+                    }
+
+
+                    & .content {
+                        transform: translateY(290px);
+
+                        & h4 {
+                            font-size: 28px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -518,13 +648,8 @@
                         height: 60px;
                     }
 
-                    & .projects_btn {
-                        width: 210px;
-                        height: 60px;
-                        font-size: 20px;
-                    }
-
-                    & .contact_btn {
+                    & .projects_btn,
+                    .contact_btn {
                         width: 210px;
                         height: 60px;
                         font-size: 20px;
@@ -570,6 +695,43 @@
             }
         }
     }
+
+    #projects {
+        padding: 75px 0;
+
+        & .container {
+            & .project_btn {
+                width: 210px;
+                height: 60px;
+
+                & button {
+                    width: 210px;
+                    height: 60px;
+                    font-size: 20px;
+                }
+            }
+
+            & .projects_wrapper {
+                & .projects_card {
+                    height: 350px;
+
+                    & .content {
+                        transform: translateY(240px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #projects {
+        & .container {
+            & .projects_wrapper {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 575px) {
@@ -584,21 +746,16 @@
                     column-gap: 24px;
 
                     & div {
-                        width: 120px;
-                        height: 40px;
+                        width: 160px;
+                        height: 50px;
                         border: 1px solid #fab448;
                         position: relative;
                     }
 
-                    & .projects_btn {
-                        width: 120px;
-                        height: 40px;
-                        font-size: 16px;
-                    }
-
-                    & .contact_btn {
-                        width: 120px;
-                        height: 40px;
+                    & .projects_btn,
+                    .contact_btn {
+                        width: 160px;
+                        height: 50px;
                         font-size: 16px;
                     }
                 }
@@ -609,7 +766,6 @@
     #about {
         & .container {
             & .about_title {
-
                 & span:nth-child(1) {
                     font-size: 24px;
                     line-height: normal;
@@ -640,6 +796,8 @@
     }
 
     #advantages {
+        padding: 75px 0;
+
         & .container {
             & .adv_title {
 
@@ -651,9 +809,85 @@
             }
         }
     }
+
+    #projects {
+        & .container {
+            & h2 {
+                margin-bottom: 55px;
+
+                & span:nth-child(1) {
+                    font-size: 24px;
+                    line-height: normal;
+                }
+
+                & span:nth-child(2) {
+                    font-size: 24px;
+                    line-height: normal;
+                    margin-left: 90px;
+                    width: 100%;
+                    letter-spacing: 2px;
+                }
+            }
+
+            & .projects_wrapper {
+                & .projects_card {
+                    height: 320px;
+
+                    & .content {
+                        transform: translateY(230px);
+                        padding: 20px;
+
+                        & h4 {
+                            font-size: 24px;
+                        }
+
+                        & p {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            & .project_btn {
+                width: 160px;
+                height: 50px;
+                border: 1px solid #fab448;
+                position: relative;
+
+                & button {
+                    width: 160px;
+                    height: 50px;
+                    font-size: 16px;
+                }
+            }
+
+        }
+    }
 }
 
 @media screen and (max-width: 375px) {
+    #intro {
+        & .container {
+            & .intro_wrapper {
+                & .intro_buttons {
+                    & div {
+                        width: 130px;
+                        height: 40px;
+                        border: 1px solid #fab448;
+                        position: relative;
+                    }
+
+                    & .projects_btn,
+                    .contact_btn {
+                        width: 130px;
+                        height: 40px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
     #about {
         & .container {
             & .about_end {
