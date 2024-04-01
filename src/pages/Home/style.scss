@@ -153,6 +153,7 @@
 
                 & div:nth-child(1) {
                     border: none;
+                    background-image: unset !important;
                 }
 
                 & div {
@@ -178,6 +179,7 @@
                     &:hover {
                         cursor: pointer;
                         background-image: url(../../assets/images/about-pic.jpg);
+                        background-size: cover;
 
                         & h5,
                         p {
@@ -878,6 +880,8 @@
     }
 
     #news {
+        padding: 55px 0;
+
         & .container {
             & h2 {
                 & span:nth-child(1) {

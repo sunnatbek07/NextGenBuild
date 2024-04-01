@@ -1,4 +1,9 @@
 footer {
+    background-image: url(../../assets/images/FooterBg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 0;
+
     & .container {
         & h2 {
             color: #262524;
@@ -8,6 +13,7 @@ footer {
             display: block;
             position: relative;
             margin-left: 70px;
+            margin-bottom: 75px;
 
             &::after {
                 content: "";
@@ -20,35 +26,264 @@ footer {
             }
         }
 
-        & .footer_wrapper {
-            & .footer_content {
-                display: flex;
+        & .items_container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-                & .contact_item {
+            & .footer_wrapper {
+                & .footer_content {
                     display: flex;
-                    max-width: 280px;
-                    column-gap: 26px;
+                    flex-direction: column;
+                    row-gap: 35px;
 
-                    & i {
-                        color: #FF9800;
-                        font-size: 32px;
-                    }
+                    & .contact_item {
+                        display: flex;
+                        max-width: 280px;
+                        column-gap: 26px;
 
-                    & .footer_text {
-                        & h4 {
-                            color: #262524;
-                            font-size: 24px;
-                            font-weight: 700;
-                            line-height: normal;
+                        & i {
+                            color: #FF9800;
+                            font-size: 32px;
                         }
 
-                        & p {
-                            color: #26252461;
-                            font-size: 16px;
+                        & .footer_text {
+                            & h4 {
+                                color: #262524;
+                                font-size: 24px;
+                                font-weight: 700;
+                                line-height: normal;
+                            }
+
+                            & p {
+                                color: #26252461;
+                                font-size: 16px;
+                                font-weight: 400;
+                                line-height: normal;
+                            }
+                        }
+                    }
+                }
+            }
+
+            & .form {
+                padding: 50px;
+                color: #262524;
+                box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+                background: #ffffff;
+                height: fit-content;
+                max-width: fit-content;
+                margin: 0 auto;
+
+
+                & form {
+                    display: flex;
+                    align-items: end;
+                    column-gap: 20px;
+
+                    & .input {
+                        display: flex;
+                        flex-direction: column;
+
+                        & label {
+                            color: rgb(38, 37, 36);
+                            font-size: 14px;
                             font-weight: 400;
-                            line-height: normal;
+                            line-height: 17px;
+                            margin-bottom: 14px;
+                        }
+
+                        & input {
+                            padding: 22px 24px;
+                            background: #f4f4f4;
+                            width: 100%;
+
+                            &:focus {
+                                outline-color: #FF9800;
+                            }
                         }
                     }
+
+                    & button {
+                        width: 192px;
+                        height: 68px;
+                        display: grid;
+                        place-content: center;
+                        background: #fab448;
+                        color: #ffffff;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 17px;
+                    }
+                }
+            }
+
+            & .social {
+                display: flex;
+                flex-direction: column;
+                color: #262524;
+                font-size: 24px;
+
+                & i {
+                    padding: 20px;
+
+                    &:hover {
+                        color: #FF9800;
+                    }
+                }
+            }
+        }
+
+        & .footer_bottom {
+            display: flex;
+            align-items: center;
+            padding-top: 50px;
+
+            & .footer_logo {
+                display: flex;
+                align-items: center;
+
+                & img {
+                    width: 80px;
+                    height: 80px;
+                }
+
+                & p {
+                    font-size: 24px;
+                    font-weight: 400;
+                    color: #262524;
+                    min-width: fit-content;
+                }
+            }
+
+            & .copy {
+                color: #262524;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 50px;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    footer {
+        & .container {
+            & .items_container {
+                display: block;
+
+                & .footer_wrapper {
+                    & .footer_content {
+                        flex-direction: row;
+                        margin-bottom: 75px;
+                        column-gap: 40px;
+                    }
+                }
+
+                & .social {
+                    flex-direction: row;
+                    justify-content: space-around;
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    footer {
+        & .container {
+            & .items_container {
+                & .footer_wrapper {
+                    & .footer_content {
+                        flex-direction: column;
+
+                        & .contact_item {
+                            max-width: 100%;
+                        }
+                    }
+                }
+
+                & .form {
+                    margin: 0;
+                    min-width: 100%;
+
+                    & form {
+                        flex-direction: column;
+                        align-items: start;
+                        row-gap: 20px;
+
+                        & .input {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        & .container {
+            & .footer_bottom {
+                & .footer_logo {
+                    & img {
+                        width: 60px;
+                        height: 60px;
+                    }
+
+                    & p {
+                        font-size: 16px;
+                    }
+
+                }
+
+                & .copy {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    footer {
+        & .container {
+            & h2 {
+                font-size: 24px;
+            }
+
+            & .items_container {
+                & .form {
+
+                    & form {
+                        & button {
+                            height: 60px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:475px) {
+    footer {
+        & .container {
+            & .items_container {
+                & .social {
+                    & i {
+                        padding: 10px;
+                    }
+                }
+            }
+
+            & .footer_bottom {
+                & .footer_logo {
+                    display: none;
                 }
             }
         }
