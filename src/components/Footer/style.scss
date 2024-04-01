@@ -1,0 +1,56 @@
+footer {
+    & .container {
+        & h2 {
+            color: #262524;
+            font-size: 60px;
+            font-weight: 700;
+            line-height: 72px;
+            display: block;
+            position: relative;
+            margin-left: 70px;
+
+            &::after {
+                content: "";
+                width: 40px;
+                height: 4px;
+                background-color: #FF9800;
+                position: absolute;
+                left: -60px;
+                top: 50%;
+            }
+        }
+
+        & .footer_wrapper {
+            & .footer_content {
+                display: flex;
+
+                & .contact_item {
+                    display: flex;
+                    max-width: 280px;
+                    column-gap: 26px;
+
+                    & i {
+                        color: #FF9800;
+                        font-size: 32px;
+                    }
+
+                    & .footer_text {
+                        & h4 {
+                            color: #262524;
+                            font-size: 24px;
+                            font-weight: 700;
+                            line-height: normal;
+                        }
+
+                        & p {
+                            color: #26252461;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: normal;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

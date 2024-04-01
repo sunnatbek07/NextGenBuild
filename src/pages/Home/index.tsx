@@ -74,7 +74,9 @@ const Home = () => {
                 <p>projects</p>
               </div>
               <div>
-                <h5>About</h5>
+                <Link to={"/about"}>
+                  <h5>About</h5>
+                </Link>
               </div>
               <div>
                 <h5>150+</h5>

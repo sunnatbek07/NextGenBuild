@@ -60,6 +60,43 @@
     }
 }
 
-@media screen   {
-    
+@media screen and (max-width: 1240px) {
+    .swiper-wrapper {
+        & .swiper-slide {
+            & .content {
+                & h4 {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .swiper-wrapper {
+        & .swiper-slide {
+            & .content {
+                & h4 {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .swiper-wrapper {
+        & .swiper-slide {
+            & .content {
+                & h4 {
+                    font-size: 20px;
+                }
+
+                & p {
+                    font-size: 14px;
+                    line-height: normal;
+                }
+            }
+        }
+    }
 }
