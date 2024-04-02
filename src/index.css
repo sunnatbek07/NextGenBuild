@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Inter", sans-serif;
     color: #FFFFFF;
@@ -16,4 +20,8 @@ body {
     .container {
         padding: 0 10px;
     }
+}
+
+.active {
+    color: #FF9800;
 }

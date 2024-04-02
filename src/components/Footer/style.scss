@@ -258,10 +258,17 @@ footer {
 
             & .items_container {
                 & .form {
+                    padding: 20px;
 
                     & form {
+                        & .input {
+                            & input {
+                                padding: 10px 15px;
+                            }
+                        }
+
                         & button {
-                            height: 60px;
+                            height: 50px;
                         }
                     }
                 }
