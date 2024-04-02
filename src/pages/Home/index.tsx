@@ -7,8 +7,12 @@ import InventoImage from "../../assets/images/Invento.webp";
 import ShcoolImage from "../../assets/images/PresidentSchool.webp";
 import "./style.scss";
 import Slider from "../../components/Ui/Slider";
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 
 const Home = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <section id="intro" className="bg-[rgba(0,0,0,.05)]">
@@ -17,17 +21,17 @@ const Home = () => {
           <div className="intro_wrapper">
             <h1 className="">NextGen Build</h1>
 
-            <p>Orzularni haqiqatga aylantirish</p>
+            <p>{t("home.homeText")}</p>
 
             <div className="intro_buttons">
               <Link to={"/projects"}>
                 <div>
-                  <button className="projects_btn">Loyihalar</button>
+                  <button className="projects_btn">{t("home.btnP")}</button>
                 </div>
               </Link>
-              <Link to={"/contact"}>
+              <Link to={"/contacts"}>
                 <div>
-                  <button className="contact_btn">Aloqa</button>
+                  <button className="contact_btn">{t("home.btnC")}</button>
                 </div>
               </Link>
             </div>
@@ -37,50 +41,50 @@ const Home = () => {
       <section id="about">
         <div className="container">
           <h2 className="about_title">
-            <span>About</span>
-            <span>NextGen Build</span>
+            <span>
+              {i18next.language == "uz"
+                ? "NextGen Build"
+                : t("home.aboutTitle1")}
+            </span>
+            <span>
+              {i18next.language == "uz"
+                ? t("home.aboutTitle1")
+                : "NextGen Build"}
+            </span>
           </h2>
           <div className="about_end">
-            <p className="about_end-text">
-              Kompaniyamiz nafaqat loyihalarni takomillashtirish, balki yangi
-              imkoniyatlar uchun ham o'z eshiklarini ochadi. Davlat miqyosidagi
-              imoratlarni barpo qilish bilan birga, istiqbol uchun ham asos
-              solishda davom etamiz Biz atrof-muhit haqida qayg'uramiz:
-              kompaniya binolar va infratuzilma poydevorlarini barpo etishdan
-              tashqari, ulardan foydalanish bilan bog'liq ekologik jihatlar
-              uchun hamma ma’suliyatni o'z zimmasiga oladi.
-            </p>
+            <p className="about_end-text">{t("home.aboutText")}</p>
 
             <div className="grid_container">
               <div></div>
               <div>
                 <h5>4000+</h5>
-                <p>The number of employees</p>
+                <p>{t("home.numberEmployees")}</p>
               </div>
               <div>
                 <h5>150+</h5>
-                <p>projects</p>
+                <p>{t("home.projectsLow")}</p>
               </div>
               <div>
-                <h5>150+</h5>
-                <p>projects</p>
+                <h5>16</h5>
+                <p>{t("home.complexes")}</p>
               </div>
               <div>
-                <h5>150+</h5>
-                <p>projects</p>
+                <h5>9</h5>
+                <p>{t("home.years")}</p>
               </div>
               <div>
-                <h5>150+</h5>
-                <p>projects</p>
+                <h5>250+</h5>
+                <p>{t("home.specialTech")}</p>
               </div>
               <div>
                 <Link to={"/about"}>
-                  <h5>About</h5>
+                  <h5>{t("header.about")}</h5>
                 </Link>
               </div>
               <div>
-                <h5>150+</h5>
-                <p>projects</p>
+                <h5>5</h5>
+                <p>{t("home.hospitals")}</p>
               </div>
             </div>
           </div>
@@ -89,8 +93,8 @@ const Home = () => {
       <section id="advantages">
         <div className="container">
           <h2 className="adv_title">
-            <span>Our</span>
-            <span>Advantages</span>
+            <span>{t("home.our")}</span>
+            <span>{t("home.advantages")}</span>
           </h2>
 
           <div className="adv_card-wrapper">
@@ -170,11 +174,8 @@ const Home = () => {
                   />
                 </g>
               </svg>
-              <h4>Our team</h4>
-              <p>
-                The company recruits experienced employees on a competitive
-                basis
-              </p>
+              <h4>{t("home.ourTeam")}</h4>
+              <p>{t("home.teamText")}</p>
             </div>
 
             <div className="adv_card">
@@ -228,11 +229,8 @@ const Home = () => {
                 </g>
               </svg>
 
-              <h4>Our team</h4>
-              <p>
-                The company recruits experienced employees on a competitive
-                basis
-              </p>
+              <h4>{t("home.customer")}</h4>
+              <p>{t("home.customerText")}</p>
             </div>
 
             <div className="adv_card">
@@ -278,11 +276,8 @@ const Home = () => {
                 </g>
               </svg>
 
-              <h4>Our team</h4>
-              <p>
-                The company recruits experienced employees on a competitive
-                basis
-              </p>
+              <h4>{t("home.guaranteed")}</h4>
+              <p>{t("home.guaranteedText")}</p>
             </div>
           </div>
         </div>
@@ -290,19 +285,15 @@ const Home = () => {
       <section id="projects">
         <div className="container">
           <h2 className="projects_title">
-            <span>Our</span>
-            <span>projects</span>
+            <span>{t("home.our")}</span>
+            <span>{t("home.projectsLow")}</span>
           </h2>
           <div className="projects_wrapper">
             <div className="projects_card">
               <img src={MagicCityImage} alt="Card image" />
               <div className="content">
                 <h4>Magic City</h4>
-                <p>
-                  Magic city is a large socially significant project. The
-                  cultural and entertainment cluster in Tashkent is one of the
-                  new attractions.
-                </p>
+                <p>{t("home.magicCity")}</p>
               </div>
             </div>
 
@@ -310,11 +301,7 @@ const Home = () => {
               <img src={BoulevardImage} alt="Card image" />
               <div className="content">
                 <h4>Boulevard</h4>
-                <p>
-                  Magic city is a large socially significant project. The
-                  cultural and entertainment cluster in Tashkent is one of the
-                  new attractions.
-                </p>
+                <p>{t("home.boulevard")}</p>
               </div>
             </div>
 
@@ -322,11 +309,7 @@ const Home = () => {
               <img src={GoldenHouseImage} alt="Card image" />
               <div className="content">
                 <h4>Golden House</h4>
-                <p>
-                  Magic city is a large socially significant project. The
-                  cultural and entertainment cluster in Tashkent is one of the
-                  new attractions.
-                </p>
+                <p>{t("home.gardens")}</p>
               </div>
             </div>
 
@@ -334,11 +317,7 @@ const Home = () => {
               <img src={FononImage} alt="Card image" />
               <div className="content">
                 <h4>Fonon</h4>
-                <p>
-                  Magic city is a large socially significant project. The
-                  cultural and entertainment cluster in Tashkent is one of the
-                  new attractions.
-                </p>
+                <p>{t("home.fonon")}</p>
               </div>
             </div>
 
@@ -346,11 +325,7 @@ const Home = () => {
               <img src={InventoImage} alt="Card image" />
               <div className="content">
                 <h4>Invento</h4>
-                <p>
-                  Magic city is a large socially significant project. The
-                  cultural and entertainment cluster in Tashkent is one of the
-                  new attractions.
-                </p>
+                <p>{t("home.invento")}</p>
               </div>
             </div>
 
@@ -358,17 +333,13 @@ const Home = () => {
               <img src={ShcoolImage} alt="Card image" />
               <div className="content">
                 <h4>President Schools</h4>
-                <p>
-                  Magic city is a large socially significant project. The
-                  cultural and entertainment cluster in Tashkent is one of the
-                  new attractions.
-                </p>
+                <p>{t("home.schools")}</p>
               </div>
             </div>
           </div>
           <Link to={"/projects"}>
             <div className="project_btn">
-              <button>All projects</button>
+              <button>{t("home.allProjects")}</button>
             </div>
           </Link>
         </div>
@@ -376,8 +347,14 @@ const Home = () => {
       <section id="news">
         <div className="container">
           <h2>
-            <span>Company</span>
-            <span>news</span>
+            <span>
+              {i18next.language == "rus" ? t("header.news") : t("home.company")}
+            </span>
+            <span>
+              {i18next.language == "rus"
+                ? t("home.company")
+                : t("home.newsLow")}
+            </span>
           </h2>
           <Slider />
         </div>

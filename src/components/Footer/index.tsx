@@ -3,23 +3,22 @@
 import { Link } from "react-router-dom";
 import DarkLogoImg from "../../assets/images/NextGenBuildingDark.png";
 import "./style.scss";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer id="contacts">
       <div className="container">
-        <h2>Contacts</h2>
+        <h2>{t("header.contacts")}</h2>
         <div className="items_container">
           <div className="footer_wrapper">
             <div className="footer_content">
               <div className="contact_item">
                 <i className="bx bxs-location-plus"></i>
                 <div className="footer_text">
-                  <h4>Address</h4>
-                  <p>
-                    Uzbekistan, Tashkent, National Park of Uzbekistan named
-                    after Alisher Navoi
-                  </p>
+                  <h4>{t("footer.address")}</h4>
+                  <p>{t("footer.realAddress")}</p>
                 </div>
               </div>
 
@@ -27,7 +26,7 @@ const Footer = () => {
                 <i className="bx bxs-phone-call"></i>
 
                 <div className="footer_text">
-                  <h4>Phone</h4>
+                  <h4>{t("footer.phone")}</h4>
                   <p>+998 71 288 88 88</p>
                 </div>
               </div>
@@ -36,8 +35,8 @@ const Footer = () => {
                 <i className="bx bxs-alarm"></i>
 
                 <div className="footer_text">
-                  <h4>Working hours</h4>
-                  <p>09:00 - 18:00 Mon-Sat</p>
+                  <h4>{t("footer.workingHoursTxt")}</h4>
+                  <p>{t("footer.workingHours")}</p>
                 </div>
               </div>
             </div>
@@ -45,14 +44,14 @@ const Footer = () => {
           <div className="form">
             <form action="">
               <div className="input">
-                <label>Phone number</label>
+                <label>{t("footer.phoneNumber")}</label>
                 <input type="tel" placeholder="+998" />
               </div>
               <div className="input">
-                <label>Name</label>
-                <input type="text" placeholder="Your name" />
+                <label>{t("footer.name")}</label>
+                <input type="text" placeholder={t("footer.placeholder")} />
               </div>
-              <button>Send</button>
+              <button>{t("footer.feedback")}</button>
             </form>
           </div>
 
@@ -82,7 +81,7 @@ const Footer = () => {
             <img src={DarkLogoImg} className="logo_light" alt="Company logo" />
             <p>NextGen Build</p>
           </div>
-          <p className="copy">&copy; NextGen Build. All rights reserved.</p>
+          <p className="copy">&copy; {t("footer.copy")}</p>
         </div>
       </div>
     </footer>

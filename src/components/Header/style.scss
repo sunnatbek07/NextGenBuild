@@ -97,6 +97,53 @@ header {
                 }
             }
         }
+
+    }
+}
+
+.MuiDrawer-modal {
+    & .nav__list {
+        &--item {
+            text-align: center;
+            padding: 10px 0;
+
+            &-link {
+                font-size: 18px;
+                font-weight: 400;
+
+                &:hover {
+                    color: #FF9800;
+                }
+            }
+        }
+    }
+
+    & .social_links {
+        display: flex;
+        justify-content: center;
+        column-gap: 30px;
+        font-size: 20px;
+        font-weight: 400;
+        margin: 40px 0;
+
+        & a:hover {
+            color: #FF9800;
+        }
+    }
+
+    & .drawer_select {
+        display: flex;
+        justify-content: center;
+
+        & select {
+            background-color: transparent;
+            border-radius: 5px;
+            outline: #FFFFFF;
+
+            & option {
+                background-color: #FF9800;
+            }
+        }
     }
 }
 
