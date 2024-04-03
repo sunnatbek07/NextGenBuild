@@ -4,9 +4,43 @@ import { Link } from "react-router-dom";
 import DarkLogoImg from "../../assets/images/NextGenBuildingDark.png";
 import "./style.scss";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import { sendData } from "../../api/form";
 
 const Footer = () => {
   const { t } = useTranslation();
+  const [name, setName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+
+  const handleName = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setName(e.target.value);
+  };
+
+  const handlePhoneNumber = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPhoneNumber(e.target.value);
+  };
+
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ): Promise<void> => {
+    e.preventDefault();
+    if (phoneNumber.length == 0) {
+      toast.error(`${t("contactsPage.msgName")}`);
+    } else if (name.length == 0) {
+      toast.error(`${t("msgNumber")}`);
+    } else {
+      try {
+        const message = `Name: ${name}, Phone Number ${phoneNumber}`;
+        toast.success(`${t("contactsPage.msgSuccess")}`);
+        sendData(message);
+        setName("");
+        setPhoneNumber("");
+      } catch (error) {
+        console.error(`${t("msgError")}`, error);
+      }
+    }
+  };
   return (
     <footer id="contacts">
       <div className="container">
@@ -42,14 +76,26 @@ const Footer = () => {
             </div>
           </div>
           <div className="form">
-            <form action="">
+            <form action="" onSubmit={handleSubmit}>
               <div className="input">
                 <label>{t("footer.phoneNumber")}</label>
-                <input type="tel" placeholder="+998" />
+                <input
+                  type="tel"
+                  placeholder="+998"
+                  value={name}
+                  required
+                  onChange={handleName}
+                />
               </div>
               <div className="input">
                 <label>{t("footer.name")}</label>
-                <input type="text" placeholder={t("footer.placeholder")} />
+                <input
+                  required
+                  type="text"
+                  placeholder={t("footer.placeholder")}
+                  value={phoneNumber}
+                  onChange={handlePhoneNumber}
+                />
               </div>
               <button>{t("footer.feedback")}</button>
             </form>
@@ -84,6 +130,7 @@ const Footer = () => {
           <p className="copy">&copy; {t("footer.copy")}</p>
         </div>
       </div>
+      <ToastContainer />
     </footer>
   );
 };

@@ -1,6 +1,6 @@
 {
     "header": {
-        "about": "Kompaniya haqida",
+        "about": "Haqida",
         "projects": "Loyihalar",
         "news": "Yangiliklar",
         "contacts": "Aloqa"
@@ -60,6 +60,10 @@
     },
     "contactsPage": {
         "cpTitle": "Sizga qanday yordam bera olamiz?",
-        "cpText": "Havolani to’ldirib, telefon raqamingizni qoldiring va biz yaqin vaqt ichida aloqaga chiqamiz"
+        "cpText": "Havolani to’ldirib, telefon raqamingizni qoldiring va biz yaqin vaqt ichida aloqaga chiqamiz",
+        "msgSuccess": "Ma'lumotingiz jo'natildi!",
+        "msgError": "Yuborishda xatolik yuz berdi:",
+        "msgName": "Ismingizni kiriting!",
+        "msgNumber": "Telefon raqamingizni kiriting!"
     }
 }

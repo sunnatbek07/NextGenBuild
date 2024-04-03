@@ -1,15 +1,16 @@
+import { useTranslation } from "react-i18next";
 import "./style.scss";
 
 const Contacts = () => {
+  const { t } = useTranslation();
   return (
     <section id="contacts2">
       <div className="mask"></div>
       <div className="container">
         <div className="main_content">
-          <h1>CONTACTS</h1>
+          <h1>{t("header.contacts")}</h1>
           <p>
-            Leave your contacts by filling out the current form and we will
-            contact you as soon as possible.
+           {t("contactsPage.cpText")}
           </p>
         </div>
         <a href="#contacts">

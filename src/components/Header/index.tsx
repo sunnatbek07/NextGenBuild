@@ -161,7 +161,7 @@ const Header = () => {
                 </li>
                 <li className="nav__list--item">
                   <NavLink to={"/projects"} className={"nav__list--item-link"}>
-                    {t("header.about")}
+                    {t("header.projects")}
                   </NavLink>
                 </li>
                 <li className="nav__list--item">
@@ -213,7 +213,11 @@ const Header = () => {
               <i className="bx bxs-phone"></i>
             </Link>
             {(["right"] as const).map((anchor) => (
-              <button className="menu_btn" onClick={toggleDrawer(anchor, true)}>
+              <button
+                className="menu_btn"
+                onClick={toggleDrawer(anchor, true)}
+                key={anchor}
+              >
                 <svg
                   width="22"
                   height="16"
