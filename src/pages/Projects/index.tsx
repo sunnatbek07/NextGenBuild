@@ -5,8 +5,13 @@ import FononImage from "../../assets/images/Fonon.webp";
 import InventoImage from "../../assets/images/Invento.webp";
 import ShcoolImage from "../../assets/images/PresidentSchool.webp";
 import "./style.scss";
+import { useEffect } from "react";
 
 const Projects = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <>
       <section id="projects2">

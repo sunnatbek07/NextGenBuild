@@ -3,8 +3,13 @@ import NewYearImage from "../../assets/images/NewYear.webp";
 import ConstitutionImage from "../../assets/images/UzbekistanConstitution.webp";
 import Houses from "../../assets/images/GoldenHouse.jpg";
 import "./style.scss";
+import { useEffect } from "react";
 
 const News = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <section id="news2">

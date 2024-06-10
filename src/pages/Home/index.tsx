@@ -9,9 +9,14 @@ import "./style.scss";
 import Slider from "../../components/Ui/Slider";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
+import { useEffect } from "react";
 
 const Home = () => {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
